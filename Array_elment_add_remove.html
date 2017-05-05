@@ -1,0 +1,41 @@
+<div id="demo"></div>
+<script>
+	
+	var arr = [{
+    username: 'fred'
+}, {
+    
+    username: 'bill'
+}, {
+    
+    username: 'ted'
+},{
+    
+    username: 'tdd'
+},{
+    
+    username: 'tefd'
+}];
+
+function add(name) {
+   
+    var found = arr.some(function (el) {
+      return el.username === name;
+    });
+    if (!found) {
+        arr.push({username: name });
+    }
+	
+	else if (found){
+      arr.splice(name,1); //this delete from the "i" index in the array to the "1" length
+     return arr;
+	    
+      }
+}
+
+
+add('billdd');
+console.log(arr);
+	document.getElementById("demo").innerHTML = arr;
+
+	</script>
